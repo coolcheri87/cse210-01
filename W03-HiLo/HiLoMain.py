@@ -4,6 +4,7 @@
 
 from game.interface import Interface
 
+# main function that starts program
 def main():
     interface = Interface()
     interface.start_game()
