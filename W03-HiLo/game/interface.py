@@ -44,3 +44,5 @@ class Interface:
                 again = input("Play again? [y/n] ")
                 if (again == 'n'):
                     done = True
+                else:
+                    print()
