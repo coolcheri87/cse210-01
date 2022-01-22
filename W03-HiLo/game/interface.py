@@ -41,8 +41,17 @@ class Interface:
 
             # See if the player wants to play again
             if (not done):
-                again = input("Play again? [y/n] ")
+                again = self.playAgain()
                 if (again == 'n'):
                     done = True
                 else:
                     print()
+
+    def playAgain(self):
+        validInput = False
+
+        while (not validInput):
+            again = input("Play again? [y/n] ").lower()
+            if ((again == 'y') or (again == 'n')):
+                validInput = False
+                return again
