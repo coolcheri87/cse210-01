@@ -1,8 +1,39 @@
 # HiLo Game
 # Cheri Hansen - han19067@byui.edu
-# HiLo Game written in Python
 
+# HiLo Game written in Python
 1. Written in Python
 2. Uses similar structure to Dice game.
 3. This is hilo card game 
 4. Guess hilo card game until ran out or not want to play anymore.
+5. Take your chances and guess if the next card if higher or lower.
+6. Gain 100 points for every corrrect guess, or lose 75 points. 
+7. Keep trying and playing as long as you want.but be careful of not losing all your points. 
+
+# Getting started
+1. Make sure you have Python 3.8.0 or newer installed and running on your machine. 
+2. Open a terminal and browse to the project's root folder. 
+3. Start the program by running the following command.
+4. Python3 hilo
+5. You can also run the program from an IDE lile Visual Studio Code. 
+6. Start your IDE and open the project folder. 
+7. Select the main module insdie the dice folder and click the "run" button. 
+
+# Project Sturcture
+"""
+The porject files and folders are organized as follows:
+"""
+root                    (project root folder)
++-- hilo                (source code for game)
+    +-- game            (specific classes)
+    +--__main__.py      (program entry point)
+    +-- README.md       (general info)
+
+#Required Technologies
+
+---
+* Python 3.8.0
+# Authors
+""" 
+*Cheri Hansen, Ian MOses, Spencer Paulsen, Mario Flota
+"""

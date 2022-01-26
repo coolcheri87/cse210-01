@@ -2,7 +2,7 @@
 # Program is the interface for the game
 # Created 1/21/2022
 
-from .card import Card, abstractmethod
+from .card import Card
 
 
 
