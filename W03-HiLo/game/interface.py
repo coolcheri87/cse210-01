@@ -2,18 +2,22 @@
 # Program is the interface for the game
 # Created 1/21/2022
 
-from .card import Card
+from .card import Card, abstractmethod
+
 
 
 # This is Interface to play hilo game
+# This is interface class 
 class Interface:
 
     # This is initializing score and card
+    @abstractmethod
     def __init__(self):
         self.score = int(300)
         self.card = Card()
 
     # This is where the game is played
+    @abstractmethod
     def start_game(self):
         done = False
 
@@ -52,6 +56,7 @@ class Interface:
                 else:
                     print()
 
+    @abstractmethod
     def playAgain(self):
         validInput = False
         #loop until player is done with game
@@ -61,6 +66,7 @@ class Interface:
                 validInput = False
                 return again
 
+    @abstractmethod
     def getHigherLower(self):
         validInput = False
         #loop until player has right input
