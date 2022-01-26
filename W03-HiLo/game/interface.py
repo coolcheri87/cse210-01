@@ -5,7 +5,6 @@
 from .card import Card
 
 
-
 # This is Interface to play hilo game
 # This is interface class 
 class Interface:

@@ -29,11 +29,11 @@ root                    (project root folder)
     +--__main__.py      (program entry point)
     +-- README.md       (general info)
 
-#Required Technologies
+# Required Technologies
 
 ---
 * Python 3.8.0
 # Authors
 """ 
-*Cheri Hansen, Ian MOses, Spencer Paulsen, Mario Flota
+* Cheri Hansen, Ian MOses, Spencer Paulsen, Mario Flota
 """
