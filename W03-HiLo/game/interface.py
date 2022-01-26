@@ -64,6 +64,7 @@ class Interface:
                 validInput = False
                 return again
 
+    # This function keeps asking for a response until it gets h or l
     def getHigherLower(self):
         validInput = False
         #loop until player has right input
