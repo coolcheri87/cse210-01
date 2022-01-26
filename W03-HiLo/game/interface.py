@@ -11,13 +11,11 @@ from .card import Card, abstractmethod
 class Interface:
 
     # This is initializing score and card
-    @abstractmethod
     def __init__(self):
         self.score = int(300)
         self.card = Card()
 
     # This is where the game is played
-    @abstractmethod
     def start_game(self):
         done = False
 
@@ -56,7 +54,7 @@ class Interface:
                 else:
                     print()
 
-    @abstractmethod
+    # This function keeps asking for a response until it gets a y or n...
     def playAgain(self):
         validInput = False
         #loop until player is done with game
@@ -66,7 +64,6 @@ class Interface:
                 validInput = False
                 return again
 
-    @abstractmethod
     def getHigherLower(self):
         validInput = False
         #loop until player has right input

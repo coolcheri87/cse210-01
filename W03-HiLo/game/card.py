@@ -5,6 +5,7 @@
 import random
     # This is a card class
 class Card:
+    
     #This is the function to choose random number from 1 thur 13
     def __init__(self):
         self.cardValue = random.randint(1,13)
