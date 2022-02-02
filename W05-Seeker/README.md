@@ -23,8 +23,9 @@ root                    (project root folder)
 ```
 
 ## Required Technologies
-* Python 3.8.0
+* Python 3.10.0
 
 ## Authors
 * Matt Manley (manleym@byui.edu)
 * Scott Burton (burtons@byui.edu)
+* Cheri Hansene (han19067@byui.edu)
