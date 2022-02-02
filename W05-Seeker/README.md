@@ -15,10 +15,11 @@ You can also run the program from an IDE like Visual Studio Code. Start your IDE
 The project files and folders are organized as follows:
 ```
 root                    (project root folder)
-+-- seeker              (source code for game)
++-- W05-Seeker          (source code for game)
   +-- game              (specific classes)
+    +-- asdflkjasdfjklsdf.py (asdfljkasdfjklsdfjklss)
   +-- __main__.py       (program entry point)
-+-- README.md           (general info)
+  +-- README.md         (general info)
 ```
 
 ## Required Technologies
