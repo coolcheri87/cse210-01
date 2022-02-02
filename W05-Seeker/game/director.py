@@ -1,3 +1,7 @@
+# Cheri Hansen - han19067@byui.edu
+# Program is seeker game W05
+# Created 2/1/2022 
+
 from game.terminal_service import TerminalService
 from game.hider import Hider
 from game.seeker import Seeker

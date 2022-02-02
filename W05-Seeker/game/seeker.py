@@ -1,4 +1,7 @@
-# TODO: Implement the Seeker class as follows...
+# Cheri Hansen - han19067@byui.edu
+# Program is play seeker game W05
+# Created 2/1/2022 
+TODO: Implement the Seeker class as follows...
 
 # 1) Add the class declaration. Use the following class comment.
 class Seeker:
