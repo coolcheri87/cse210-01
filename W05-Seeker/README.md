@@ -24,7 +24,7 @@ root                        (project root folder)
   +-- __main__.py           (program entry point)
   +-- README.md             (general info)
 ```
-
+## Seeker game is complete by Cheri Hansen
 ## Required Technologies
 * Python 3.10.0
 
