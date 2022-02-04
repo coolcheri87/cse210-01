@@ -14,14 +14,17 @@ You can also run the program from an IDE like Visual Studio Code. Start your IDE
 ## Project Structure
 The project files and folders are organized as follows:
 ```
-root                    (project root folder)
-+-- W05-Seeker          (source code for game)
-  +-- game              (specific classes)
-    +-- asdflkjasdfjklsdf.py (asdfljkasdfjklsdfjklss)
-  +-- __main__.py       (program entry point)
-  +-- README.md         (general info)
+root                        (project root folder)
++-- W05-Seeker              (source code for game)
+  +-- game                  (specific classes)
+    +-- director.py         (director control game)
+    +-- hider.py            (hider keep tract of location and distance from seeker)
+    +-- seeker.py           (Seeker keep tract of location and distance travelled)
+    +-- terminal_service.py`(responsiblity of input and output terminal service)
+  +-- __main__.py           (program entry point)
+  +-- README.md             (general info)
 ```
-
+## Seeker game is complete by Cheri Hansen
 ## Required Technologies
 * Python 3.10.0
 

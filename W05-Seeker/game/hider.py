@@ -1,3 +1,6 @@
+# Cheri Hansen - han19067@byui.edu
+# Program is seeker game W05
+# Created 2/1/2022 
 import random
 
 class Hider:

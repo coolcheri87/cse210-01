@@ -1,3 +1,6 @@
+# Cheri Hansen - han19067@byui.edu
+# Program is play seeker game W05
+# Created 1/21/2022 
 class TerminalService:
     """A service that handles terminal operations.
     
