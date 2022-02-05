@@ -1,6 +1,6 @@
 # Cheri Hansen - han19067@byui.edu
 # Program is the interface for the game
-# Created 1/21/2022
+# Created 2/1/2022
 
 from .dictionary import Dictionary
 from .jumper import Jumper
