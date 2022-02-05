@@ -14,6 +14,7 @@ class Seeker:
     """
 
 # 2) Create the class constructor. Use the following method comment.
+    # Constructor with class with it attribution 
     def __init__(self):
         """Constructs a new Seeker.
         
@@ -21,9 +22,11 @@ class Seeker:
             self (Seeker): An instance of Seeker.
         """
         #constructor set up location start in middle
+        # constructor start in middle is 500
         self._location = 500
 
 # 3) Create the get_location(self) method. Use the following method comment.
+    # get private current location 
     def get_location(self):
         """Gets the current location.
         
