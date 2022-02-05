@@ -46,7 +46,7 @@ class Interface:
             
             # If we won, let's celebrate!
             if (count == 0):
-                print("You guessed the word. Yahoo!!")
+                print("You guessed the word. Yahoo!! \n")
                 self.jumper.getJumper(0,self.displayWord)
                 done = True
 

@@ -1,15 +1,15 @@
-# Guess my number game.
+# Jumper is guess word or hangman
 # Cheri Hansen - han19067@byui.edu
 
-# Guess My Number Game written in Python
+# Jumper game written in Python
 1. Written in Python
-2. Uses similar structure to card game.
-3. This is guess my number game 
-4. Guess my number until ran out or not want to play anymore.
-5. Take your chances and guess if the next guess number is hot or cold.
-6. Gain 100 points for every corrrect guess, or lose 50 points. 
-7. Keep guess my number and playing as long as you want, but be careful of not losing all your points. 
-
+2. Uses similar structure to guess word to play jumper.
+3. This is guess my word jumper game.
+4. Guess my letter until ran out or lose game.
+5. Take your chances and guess if the next guess letter of word.
+6. If you guesses word it say You guesses the word. Yahoo!!
+7. If you lose this game then say Sorry your jumper didn't make it. 
+7. Keep guess word and playing as long as you want, but be careful you might lose game.
 # Getting started
 1. Make sure you have Python 3.8.0 or newer installed and running on your machine. 
 2. Open a terminal and browse to the project's root folder. 
