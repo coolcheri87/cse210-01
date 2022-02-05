@@ -12,18 +12,21 @@ class Interface:
     def __init__(self):
         self.dictionary = Dictionary()
         self.jumper = Jumper()
+
+        # Set displayWord to bunch of underscores...
+        self.displayWord = []
+        for i in range(len(self.dictionary.getWord())):
+            self.displayWord.append('_')
+
+        # Let's us see the word while debugging
         print(self.dictionary.getWord())
 
 
     def start_game(self):
         done = False
-        displayWord = ''
-        for i in range(len(self.dictionary.getWord())):
-            displayWord += '_'
 
         # Output first
-        print(displayWord)
-        self.jumper.getJumper(0)
+        self.jumper.getJumper(0,self.displayWord)
 
         while (not done):
             x = input('Guess a letter [a-z]: ')
@@ -31,16 +34,28 @@ class Interface:
             # See if any letters match...
             guessed = False
             for i in range(len(self.dictionary.getWord())):
-                if (self.dictionary.getWord()[i] == x):
+                if (self.dictionary.getWord()[i] == x[0]):
                     guessed = True
-                    displayWord[i] = x[0]
+                    self.displayWord[i] = x[0]
 
-            print(displayWord)
-            if (guessed):
-                done = self.jumper.getJumper(0)
-            else:
-                done = self.jumper.getJumper(1)
-
-
+            # See if we won!
+            count = 0
+            for i in range(len(self.displayWord)):
+                if (self.displayWord[i] == '_'):
+                    count = count + 1
             
+            # If we won, let's celebrate!
+            if (count == 0):
+                print("You guessed the word. Yahoo!!")
+                self.jumper.getJumper(0,self.displayWord)
+                done = True
+
+            # If not done...
+            if (not done):
+                if (guessed):
+                    done = self.jumper.getJumper(0,self.displayWord)
+                else:
+                    done = self.jumper.getJumper(1,self.displayWord)
+
+
 

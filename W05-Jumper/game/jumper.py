@@ -7,8 +7,16 @@ class Jumper:
     def __init__(self):
         self._tries = 0
 
-    def getJumper(self,guess):
-        self._tries -= guess
+    def getJumper(self,guess,displayWord):
+        output = ''
+        for i in range(len(displayWord)):
+            output += ' ' + displayWord[i]
+        print(output)
+        print()
+
+        # Track wrong guesses
+        self._tries += guess
+
         if (self._tries == 0):
             print (' ---  ')
             print ('/   \ ')
