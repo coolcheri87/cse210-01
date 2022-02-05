@@ -4,6 +4,7 @@
 
 from .dictionary import Dictionary
 from .jumper import Jumper
+from .startover import StartOver
 
 
 class Interface:
@@ -12,24 +13,27 @@ class Interface:
     def __init__(self):
         self.dictionary = Dictionary()
         self.jumper = Jumper()
+        self.so = StartOver()
+        
 
+    def setupDisplayWord(self):
         # Set displayWord to bunch of underscores...
         self.displayWord = []
         for i in range(len(self.dictionary.getWord())):
             self.displayWord.append('_')
-
-        # Let's us see the word while debugging
-        print(self.dictionary.getWord())
 
 
     def start_game(self):
         done = False
 
         # Output first
+        self.setupDisplayWord()
         self.jumper.getJumper(0,self.displayWord)
 
         while (not done):
-            x = input('Guess a letter [a-z]: ')
+            x = ''
+            while (len(x) == 0):
+                x = input('Guess a letter [a-z]: ')
 
             # See if any letters match...
             guessed = False
@@ -56,6 +60,16 @@ class Interface:
                     done = self.jumper.getJumper(0,self.displayWord)
                 else:
                     done = self.jumper.getJumper(1,self.displayWord)
+
+            # If lost or won, do you want to start over
+            if (done):
+                done = self.so.startover()
+                if (not done):
+                    self.dictionary = Dictionary()
+                    self.jumper = Jumper()
+                    self.setupDisplayWord()
+                    self.jumper.getJumper(0,self.displayWord)
+
 
 
 
