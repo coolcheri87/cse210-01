@@ -3,16 +3,18 @@
 
 class Jumper:
     
-    # This is initializing score and card
+    # This is initializing number of unsuccessful tries
     def __init__(self):
         self._tries = 0
 
+    # Display word guessing status and our jumper graphic
     def getJumper(self,guess,displayWord):
+
+        # Output displayWord list in a nice format
         output = ''
         for i in range(len(displayWord)):
             output += ' ' + displayWord[i]
-        print(output)
-        print()
+        print(output + "\n")
 
         # Track wrong guesses
         self._tries += guess
@@ -44,6 +46,11 @@ class Jumper:
             print ('  O   ')
         if (self._tries > 4):
             print ('  X   ')
+            print (' /|\  ')
+            print (' / \  ')
+            print ('^^^^^^')
+            print ()
+            print ("Sorry your jumper didn't make it...\n")
             return True
         print (' /|\  ')
         print (' / \  ')
