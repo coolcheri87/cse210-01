@@ -1,6 +1,7 @@
 # Cheri Hansen  - han19067@byui.edu
-# Program is the interface for the juumper game
+# Program is the display word and jumper graphic for the juumper game
 # Created 2/1/2022
+# CSE 210-03 W05 Jumper game
 
 
 class Jumper:

@@ -1,5 +1,5 @@
 # Cheri Hansen - han19067@byui.edu
-# Program to run HiLo game
+# Program to run jumper game to start
 # Created 2/1/2022
 # CSE 210-03 W05 Jumper game
 

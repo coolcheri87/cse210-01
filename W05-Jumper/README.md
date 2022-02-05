@@ -3,6 +3,7 @@
 # Created 2/1/2022
 # Jumper is guess word game or hangman
 # Cheri Hansen - han19067@byui.edu
+# CSE 210-03 W05 Jumper game
 
 # Jumper game written in Python
 1. Written in Python

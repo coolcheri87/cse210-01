@@ -1,7 +1,7 @@
-
-
-
-
+# Cheri Hansen - han19067@byui.edu
+# Program is start over for the juumper game
+# Created 2/1/2022
+# CSE 210-03 W05 Jumper game
 
 class StartOver:
 
