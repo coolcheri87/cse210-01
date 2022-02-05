@@ -1,7 +1,7 @@
 # Cheri Hansen - han19067@byui.edu
 # Program to run HiLo game
 # Created 2/1/2022
-# CSE 210-02 W03 hilo card game 
+# CSE 210-02 W05 Jumper game
 
 from game.interface import Interface
 

@@ -1,5 +1,5 @@
 # Cheri Hansen - han19067@byui.edu
-# Program is the interface for the game
+# Program is the interface for the juumper game
 # Created 2/1/2022
 
 from .dictionary import Dictionary
