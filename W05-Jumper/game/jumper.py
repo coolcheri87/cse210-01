@@ -1,4 +1,6 @@
-# Cheri Hansen
+# Cheri Hansen  - han19067@byui.edu
+# Program is the interface for the juumper game
+# Created 2/1/2022
 
 
 class Jumper:

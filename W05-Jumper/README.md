@@ -1,3 +1,6 @@
+# Cheri Hansen - han19067@byui.edu
+# Program is the interface for the juumper game
+# Created 2/1/2022
 # Jumper is guess word game or hangman
 # Cheri Hansen - han19067@byui.edu
 
@@ -23,11 +26,14 @@
 """
 The project files and folders are organized as follows:
 """
-root                    (project root folder)
-+-- guess my word    (source code for game)
-    +-- game            (specific classes)
-    +--JumperMain.py    (program entry point)
-    +-- README.md       (general info)
+root                        (project root folder)
++-- guess my word           (source code for game)
+    +-- game                (specific classes)
+    +--directionary.py      (specific classes)
+    +--interface.py         (specific classes)
+    +--jumper.py            (specific classes)
+    +--JumperMain.py        (program entry point)
+    +-- README.md           (general info)
 
 # Required Technologies
 ---
