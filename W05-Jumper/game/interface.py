@@ -10,20 +10,20 @@ from .startover import StartOver
 
 class Interface:
 
-    # This is initializing score and card
+    # This is initializing score.
     def __init__(self):
         self.dictionary = Dictionary()
         self.jumper = Jumper()
         self.so = StartOver()
         
-
+    # This is  display word on screen
     def setupDisplayWord(self):
         # Set displayWord to bunch of underscores...
         self.displayWord = []
         for i in range(len(self.dictionary.getWord())):
             self.displayWord.append('_')
 
-
+    # start game 
     def start_game(self):
         done = False
 

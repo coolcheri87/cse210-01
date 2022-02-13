@@ -9,7 +9,7 @@
 1. Written in Python
 2. Uses similar structure to guess word to play jumper.
 3. This is guess my word in jumper game.
-4. Guess my letter until ran out of word, either wind game or lose game .
+4. Guess my letter until ran out of word, either win game or lose game .
 5. Take your chances and guess if the next guess letter of word.
 6. If you guesses word it say You guesses the word. Yahoo!!
 7. If you lose this game then say Sorry your jumper didn't make it. 
