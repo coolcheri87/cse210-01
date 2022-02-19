@@ -4,9 +4,6 @@ import pyray
 
 class KeyboardService:
 
-    def __init__(self):
-        self._cell_size = 1
-
     def get_direction(self):
         # Movement
         dx = 0

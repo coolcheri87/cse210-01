@@ -3,6 +3,8 @@ import pyray
 import random
 import sys
 sys.path.append('..')
+from .keyboardService import KeyboardService
+from .screenService import ScreenService
 from faller.gem import Gem
 from faller.rock import Rock
 from player.player import Player
@@ -27,13 +29,19 @@ class Interface:
             else:
                 self._fallers.append(Gem(self._maxHeight))
 
-    def start_game(self):
-        loops = 0
+        # Setup keyboard and screen stuff
+        self._keyboardService = KeyboardService()
+        self._screenService = ScreenService(self._width,self._maxHeight,self._fallers)
 
-        while (loops < 5):
+    def start_game(self):
+
+        self._screenService().open_window()
+        while self._screenService.is_window_open():
             # Output screen...
             self.outputScreen()
+
             # Get user input...
+            self._player.
 
             # Have items fall and reset fallen
             for i in range(0,self._width):
@@ -43,8 +51,6 @@ class Interface:
                         self._player.setImpact(self._fallers[i].getImpact())
                     self._fallers[i].resetHeight()
 
-            # End game if requested
-            loops += 1
             
 
     def outputScreen(self):
