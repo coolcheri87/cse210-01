@@ -1,5 +1,6 @@
 
 import random
+import time
 import sys
 sys.path.append('..')
 from .keyboardService import KeyboardService
@@ -23,7 +24,7 @@ class Interface:
         print('Initializing rocks and gems...')
         self._fallers = []
         for i in range(0,self._width):
-            if (random.randint(0,1) == 0):
+            if (random.randint(0,2) == 0):
                 self._fallers.append(Rock(self._maxHeight))
             else:
                 self._fallers.append(Gem(self._maxHeight))
@@ -34,25 +35,38 @@ class Interface:
         self._screenService.open_window()
 
     def start_game(self):
+        t = time.time()
 
         while self._screenService.is_window_open():
-            # Output screen...
-            self.outputScreen()
 
             # Get user input...
             self._player.moveX(self._width,self._keyboardService.get_direction())
 
-            # Have items fall and reset fallen
-            for i in range(0,self._width):
-                self._fallers[i].fall()
-                if (self._fallers[i].getHeight()==self._maxHeight):
-                    if (self._player.getX()==i):
-                        self._player.setImpact(self._fallers[i].getImpact())
-                    self._fallers[i].resetHeight()
+            # Output screen...
+            if ((time.time()-t)>0.33):
+                self.outputScreen()
+
+                # Have items fall and reset fallen
+                for i in range(0,self._width):
+                    self._fallers[i].fall()
+                    if (self._fallers[i].getHeight()==self._maxHeight):
+                        if (self._player.getX()==i):
+                            self._player.setImpact(self._fallers[i].getImpact())
+                        if (random.randint(0,2) == 0):
+                            self._fallers[i] = Rock(self._maxHeight)
+                        else:
+                            self._fallers[i] = Gem(self._maxHeight)
+                        self._fallers[i].resetHeight()
+
+                t=time.time()
+
+        self._screenService.close_window()
 
             
 
     def outputScreen(self):
+        # start drawing
+        self._screenService.clear_buffer()
 
         # Input stuff in the sky...
         self._screenService.draw_fallers(self._fallers)
@@ -60,6 +74,6 @@ class Interface:
         # draw player
         self._screenService.draw_player(self._player)
 
-        print('Score for ' + self._player.getName() + ' is: ' + str(self._player.getScore()))
-        print('Player position is: ' + str(self._player.getX()))
+        # end drawing
+        self._screenService.flush_buffer()
 

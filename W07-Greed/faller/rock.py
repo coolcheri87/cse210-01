@@ -1,4 +1,5 @@
 
+import pyray
 import random
 from .faller import Faller
 from .gravity import Gravity
@@ -24,7 +25,9 @@ class Rock(Faller):
 
     def getSymbol(self):
         if (self._height<8):
-            return '.'
+            return 'o'
         else:
-            return 'x'
+            return 'o'
 
+    def getColor(self):
+        return pyray.BROWN
