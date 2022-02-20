@@ -1,5 +1,4 @@
 
-import pyray
 import sys
 sys.path.append('.')
 from game.interface import Interface
