@@ -13,8 +13,8 @@ class Interface:
 
     def __init__(self, player):
         # Setup screen size!
-        self._width = 40
-        self._maxHeight = 15
+        self._width = 30
+        self._maxHeight = 25
 
         # Get player
         self._player = player
@@ -43,7 +43,7 @@ class Interface:
             self._player.moveX(self._width,self._keyboardService.get_direction())
 
             # Output screen...
-            if ((time.time()-t)>0.33):
+            if ((time.time()-t)>0.25):
                 self.outputScreen()
 
                 # Have items fall and reset fallen

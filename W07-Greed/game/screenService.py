@@ -53,5 +53,5 @@ class ScreenService:
         return not pr.window_should_close()
 
     def open_window(self):
-        pr.init_window(self._width*self._cell_size, (self._height+1)*self._cell_size, 'Greed')
+        pr.init_window(self._width*self._cell_size, (self._height+1)*self._cell_size, 'Greed 1.00.20220219')
         pr.set_target_fps(30)

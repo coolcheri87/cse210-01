@@ -11,16 +11,13 @@ class Gem(Faller):
         self._gravity.setMoonGravity()
         self._maxHeight = maxHeight
         # Setup random position in the top two thirds of play
-        self._height = random.randint(0,maxHeight*2/3)
+        self._height = random.randint(0,int(maxHeight*2/3))
 
     def getImpact(self):
         return 1
 
     def getSymbol(self):
-        if (self._height<8):
-            return '*'
-        else:
-            return '*'
+        return '*'
 
     def getColor(self):
         c = random.randint(0,4)
