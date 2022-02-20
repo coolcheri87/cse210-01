@@ -18,6 +18,9 @@ class Player:
     def getScore(self):
         return self._score.getScore()
 
+    def getSymbol(self):
+        return '#'
+
     def getX(self):
         return self._x
 
@@ -31,5 +34,6 @@ class Player:
             self._x = 0
         if (self._x >= width):
             self._x = width -1
+
 
 

@@ -1,5 +1,4 @@
 
-import pyray
 import random
 import sys
 sys.path.append('..')
@@ -32,16 +31,16 @@ class Interface:
         # Setup keyboard and screen stuff
         self._keyboardService = KeyboardService()
         self._screenService = ScreenService(self._width,self._maxHeight,self._fallers)
+        self._screenService.open_window()
 
     def start_game(self):
 
-        self._screenService().open_window()
         while self._screenService.is_window_open():
             # Output screen...
             self.outputScreen()
 
             # Get user input...
-            self._player.
+            self._player.moveX(self._width,self._keyboardService.get_direction())
 
             # Have items fall and reset fallen
             for i in range(0,self._width):
@@ -54,38 +53,13 @@ class Interface:
             
 
     def outputScreen(self):
-        # Input top line
-        line = '+'
-        for i in range (0,self._width):
-            line += '-'
-        print(line + '+')
 
         # Input stuff in the sky...
-        for i in range (0,self._maxHeight):
-            line = '|'
-            for j in range (0,self._width):
-                if (self._fallers[j].getHeight()==i):
-                    line +=self._fallers[j].getSymbol()
-                else:
-                    line += ' '
-            print (line + "|")
+        self._screenService.draw_fallers(self._fallers)
 
-        # Input stuff on the ground...
-        line = '['
-        for i in range (0,self._width):
-            if (self._player.getX() == i):
-                line += '#'
-            elif (self._fallers[j].getHeight()==self._maxHeight):
-                line +=self._fallers[j].getSymbol()
-            else:
-                line += ' '
-        print(line + ']')
+        # draw player
+        self._screenService.draw_player(self._player)
 
-        # Input bottom line
-        line = '+'
-        for i in range (0,self._width):
-            line += '-'
-        print(line + '+')
         print('Score for ' + self._player.getName() + ' is: ' + str(self._player.getScore()))
         print('Player position is: ' + str(self._player.getX()))
 
