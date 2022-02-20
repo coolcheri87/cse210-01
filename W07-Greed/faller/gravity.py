@@ -21,7 +21,7 @@ class Gravity:
         self._min=2
         self._max=3;
 
-    def setMoontGravity(self):
+    def setMoonGravity(self):
         self._min=1
         self._max=2
 

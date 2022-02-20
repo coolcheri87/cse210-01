@@ -8,7 +8,7 @@ class Gem(Faller):
 
     def __init__(self,maxHeight):
         super().__init__()
-        self._gravity.setMoontGravity()
+        self._gravity.setMoonGravity()
         self._maxHeight = maxHeight
         # Setup random position in the top two thirds of play
         self._height = random.randint(0,maxHeight*2/3)
